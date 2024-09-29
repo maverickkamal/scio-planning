@@ -41,6 +41,8 @@ export default function Home() {
         return <Homepage onGetAccess={handleGetAccess} onSignIn={handleSignIn} />
       case 'signup':
         return <SignupForm onBack={() => router.push('/')} />
+      case 'signin':
+        return <SignupForm onBack={() => router.push('/')} />
       case 'chat':
         return <ChatPage />
       case 'oauth-callback':
