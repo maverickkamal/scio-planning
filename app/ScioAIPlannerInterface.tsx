@@ -203,7 +203,7 @@ export default function ScioAIPlannerInterface() {
         formData.append(`files`, file.file)
       })
 
-      const response = await axios.post('http://localhost:8000/chat', formData, {
+      const response = await axios.post('https://scio-planning.vercel.app/chat', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
@@ -240,7 +240,7 @@ export default function ScioAIPlannerInterface() {
 
   const fetchSchedule = async () => {
     try {
-      const response = await axios.post('http://localhost:8000/get_schedule', null, {
+      const response = await axios.post('https://scio-planning.vercel.app/get_schedule', null, {
         headers: {
           'Content-Type': 'application/json',
         },
