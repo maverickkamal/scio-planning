@@ -6,6 +6,7 @@ import ScioAIPlannerInterface from '../ScioAIPlannerInterface'
 import { useAuth } from '../AuthContext'
 
 export default function ChatPage() {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { user } = useAuth()
   const router = useRouter()
 

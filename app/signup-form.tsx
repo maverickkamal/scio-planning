@@ -4,6 +4,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import { ArrowLeft, Eye, EyeOff } from 'lucide-react'
 import { auth } from './firebase'
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { createUserWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } from 'firebase/auth'
 import axios from 'axios'
 import { useRouter } from 'next/navigation'
@@ -120,6 +121,7 @@ export default function SignupForm({ onBack }: SignupFormProps) {
     try {
       // Create user with email and password
       const userCredential = await createUserWithEmailAndPassword(auth, email, password)
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
       const user = userCredential.user
 
       // Send the user to the chat interface

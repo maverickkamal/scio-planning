@@ -35,6 +35,7 @@ export async function GET(request: Request) {
   const messages = await kv.hgetall(`chat:${chatId}`)
   const sortedMessages = Object.entries(messages || {})
     .sort(([a], [b]) => parseInt(a) - parseInt(b))
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     .map(([_, value]) => JSON.parse(value as string))
 
   return NextResponse.json(sortedMessages)

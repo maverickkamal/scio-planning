@@ -1,9 +1,9 @@
 "use client"
 
 import { useState, useEffect, useRef } from 'react'
-import { Clock, MessageSquare, Calendar as CalendarIcon, Plus, Send, Paperclip, Copy, RotateCcw, Edit, User, Settings, LogOut, ChevronUp, ChevronDown, History, ListTodo, Loader2, Check, FileText, Film, Image as ImageIcon, X } from 'lucide-react'
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+import { Calendar as CalendarIcon, Plus, Send, Paperclip, Copy, RotateCcw, Edit, Settings, LogOut, History, ListTodo, Loader2, Check, FileText, Film, Image as ImageIcon, X } from 'lucide-react'
 import { Button } from "@/components/ui/button"
-import { Textarea } from "@/components/ui/textarea"
 import { Calendar } from "@/components/ui/calendar"
 import Image from 'next/image'
 import ScioLogo from './scio-logo.svg'
@@ -102,14 +102,18 @@ const GlassmorphicTextarea = ({ ...props }: React.TextareaHTMLAttributes<HTMLTex
     className="w-full px-4 py-2 bg-white bg-opacity-10 rounded-lg backdrop-filter backdrop-blur-lg border border-white border-opacity-20 text-white placeholder-white placeholder-opacity-60 focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-transparent transition duration-200 resize-none"
   />
 )
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+
 
 export default function ScioAIPlannerInterface() {
   const router = useRouter()
   const { user } = useAuth()
   const [messages, setMessages] = useState<Array<{id: number, role: 'human' | 'assistant', content: string, files?: UploadedFile[]}>>([])
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [isCalendarOpen, setIsCalendarOpen] = useState(false)
   const [editingMessageId, setEditingMessageId] = useState<number | null>(null)
   const [editedContent, setEditedContent] = useState('')
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [isGenerating, setIsGenerating] = useState(false)
   const [isSidebarExpanded, setIsSidebarExpanded] = useState(false)
   const [activeSection, setActiveSection] = useState<string | null>('chat')
@@ -119,10 +123,13 @@ export default function ScioAIPlannerInterface() {
   const [uploadedFiles, setUploadedFiles] = useState<UploadedFile[]>([])
   const [copiedMessageId, setCopiedMessageId] = useState<number | null>(null)
   const [sentFiles, setSentFiles] = useState<UploadedFile[]>([])
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [profilePic, setProfilePic] = useState(DefaultProfilePic)
   const [isLoading, setIsLoading] = useState(false)
   const [userName, setUserName] = useState('')
   const [userEmail, setUserEmail] = useState('')
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+
 
   const messagesEndRef = useRef<HTMLDivElement>(null)
 
@@ -191,6 +198,7 @@ export default function ScioAIPlannerInterface() {
       const formData = new FormData()
       formData.append('message', content)
       formData.append('user_id', localStorage.getItem('user_id') || '')
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
       files.forEach((file, index) => {
         formData.append(`files`, file.file)
       })

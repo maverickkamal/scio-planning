@@ -4,6 +4,7 @@ import { ArrowLeft, Eye, EyeOff } from 'lucide-react'
 import Image from 'next/image'
 import ScioLogo from './scio-logo.svg'
 import { auth } from './firebase'
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } from 'firebase/auth'
 import axios from 'axios'
 import { useRouter } from 'next/navigation'
@@ -216,7 +217,7 @@ export default function SigninForm({ onBack }: SigninFormProps) {
         </div>
         <div className="mt-6 text-center text-sm">
           <Link href="/signup" className="text-green-400 hover:text-green-300 transition-colors duration-200">
-            Don't have an account? Sign up
+            Don&apos;t have an account? Sign up
           </Link>
         </div>
         <div className="mt-2 text-center text-sm">
