@@ -147,7 +147,7 @@ export default function SigninForm({ onBack }: SigninFormProps) {
 
   const handleGoogleSignin = async () => {
     try {
-      const response = await axios.get('http://localhost:8000/login');
+      const response = await axios.get('https://scio-plan-backend.onrender.com/login');
       if (response.data && response.data.url) {
         localStorage.setItem('returningUser', 'true');
         window.location.href = response.data.url;
