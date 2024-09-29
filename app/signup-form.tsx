@@ -155,74 +155,26 @@ export default function SignupForm({ onBack }: SignupFormProps) {
           Back
         </button>
       </div>
-      <div className="z-10 w-full max-w-md p-8">
+      <div className="z-10 w-full max-w-md p-10" style={{
+        backgroundColor: "rgba(0, 0, 0, .2)",
+        boxShadow: "0 0 50px -50px white",
+        backdropFilter: "blur(5px)"
+      }}>
         <div className="flex justify-center mb-8">
           <div className="w-16 h-16 bg-gradient-to-br from-green-400 to-blue-500 rounded-full flex items-center justify-center">
             <span className="text-white text-2xl font-bold">S</span>
           </div>
         </div>
-        <h2 className="text-3xl font-bold text-center mb-6">Request Access</h2>
-        <form onSubmit={handleSubmit} className="space-y-4">
-          <GlassmorphicInput
-            label="Name"
-            type="text"
-            placeholder="John Doe"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            required
-          />
-          <GlassmorphicInput
-            label="Email"
-            type="email"
-            placeholder="name@example.com"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
-          <div className="space-y-1">
-            <label className="block text-sm font-medium text-white">Password</label>
-            <div className="relative">
-              <input
-                type={showPassword ? "text" : "password"}
-                placeholder="Enter your password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                required
-                className="w-full px-4 py-2 bg-white bg-opacity-10 rounded-lg backdrop-filter backdrop-blur-lg border border-white border-opacity-20 text-white placeholder-white placeholder-opacity-60 focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-transparent transition duration-200"
-              />
-              <button
-                type="button"
-                onClick={() => setShowPassword(!showPassword)}
-                className="absolute inset-y-0 right-0 pr-3 flex items-center text-white"
-              >
-                {showPassword ? <EyeOff className="h-5 w-5" /> : <Eye className="h-5 w-5" />}
-              </button>
-            </div>
-          </div>
-          <GlassmorphicButton type="submit">
-            Sign Up
-          </GlassmorphicButton>
-        </form>
         <div className="mt-4">
-          <button onClick={handleGoogleSignup} className="w-full py-2 px-4 bg-white text-gray-800 rounded-lg hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center">
+          <button onClick={handleGoogleSignup} className="w-full py-2 px-4 bg-white text-gray-800 rounded-lg hover:bg-green-500 transition-colors duration-200 flex items-center justify-center">
             <svg className="w-5 h-5 mr-2" viewBox="0 0 24 24">
               {/* Google icon paths */}
             </svg>
-            Sign up with Google
+            Continue with Google
           </button>
         </div>
-        <div className="mt-6 text-center text-sm">
-          <Link href="/login" className="text-green-400 hover:text-green-300 transition-colors duration-200">
-            Already have an account? Log in
-          </Link>
-        </div>
-        <div className="mt-2 text-center text-sm">
-          <Link href="/forgot-password" className="text-green-400 hover:text-green-300 transition-colors duration-200">
-            Forgot password?
-          </Link>
-        </div>
         <div className="mt-6 text-center text-xs text-gray-300">
-          By clicking request access, you agree to our
+          By continuing, you agree to our
           <Link href="/terms" className="text-green-400 hover:text-green-300 transition-colors duration-200 ml-1">
             Terms of Service
           </Link> and

@@ -7,7 +7,6 @@ import SignupForm from './signup-form'
 import ChatPage from './chat/page'
 import OAuthCallback from './oauth-callback'
 import { AuthProvider } from './AuthContext'
-import SigninPage from './signin/page'
 
 export default function Home() {
   const router = useRouter()
@@ -42,8 +41,6 @@ export default function Home() {
         return <Homepage onGetAccess={handleGetAccess} onSignIn={handleSignIn} />
       case 'signup':
         return <SignupForm onBack={() => router.push('/')} />
-      case 'signin':
-        return <SigninPage />
       case 'chat':
         return <ChatPage />
       case 'oauth-callback':

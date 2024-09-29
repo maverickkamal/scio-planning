@@ -90,7 +90,7 @@ const BackgroundAnimation = () => {
     }
   }, [])
 
-  return <canvas ref={canvasRef} className="fixed inset-0 z-0" />
+  return <canvas style={{filter: "brightness(.5)"}} ref={canvasRef} className="fixed inset-0 z-0" />
 }
 
 const GlassmorphicButton: React.FC<React.ButtonHTMLAttributes<HTMLButtonElement>> = ({ children, className = '', ...props }) => (
@@ -100,7 +100,7 @@ const GlassmorphicButton: React.FC<React.ButtonHTMLAttributes<HTMLButtonElement>
       bg-green-500 bg-opacity-20 backdrop-filter backdrop-blur-lg
       hover:bg-blue-500 hover:bg-opacity-20
       rounded-tl-xl rounded-br-xl rounded-tr-md rounded-bl-md
-      transition-all duration-300 ease-in-out
+      transition-all duration-200 ease-in
       ${className}
     `}
     {...props}
@@ -122,14 +122,13 @@ export default function Homepage({ onGetAccess, onSignIn }: HomepageProps) {
         </div>
         <nav className="hidden md:block">
           <ul className="flex space-x-4">
-            <li><Link href="#" className="hover:text-gray-300 transition-colors duration-200">Features</Link></li>
-            <li><Link href="#" className="hover:text-gray-300 transition-colors duration-200">About</Link></li>
-            <li><Link href="#" className="hover:text-gray-300 transition-colors duration-200">Contact</Link></li>
+            <li><Link href="#" className="hover:text-green-500 transition-colors duration-200">Features</Link></li>
+            <li><Link href="#" className="hover:text-green-500 transition-colors duration-200">About</Link></li>
+            <li><Link href="#" className="hover:text-green-500 transition-colors duration-200">Contact</Link></li>
           </ul>
         </nav>
         <div className="hidden md:flex space-x-2 sm:space-x-4">
-          <GlassmorphicButton onClick={onSignIn}>Sign In</GlassmorphicButton>
-          <GlassmorphicButton onClick={onGetAccess}>Get access</GlassmorphicButton>
+          <GlassmorphicButton onClick={onGetAccess}>Start for free</GlassmorphicButton>
         </div>
         <button className="md:hidden" onClick={() => setMenuOpen(!menuOpen)}>
           <Menu className="w-6 h-6" />
@@ -142,19 +141,22 @@ export default function Homepage({ onGetAccess, onSignIn }: HomepageProps) {
             <Link href="#" className="text-xl" onClick={() => setMenuOpen(false)}>Features</Link>
             <Link href="#" className="text-xl" onClick={() => setMenuOpen(false)}>About</Link>
             <Link href="#" className="text-xl" onClick={() => setMenuOpen(false)}>Contact</Link>
-            <GlassmorphicButton onClick={() => { onSignIn(); setMenuOpen(false); }}>Sign In</GlassmorphicButton>
-            <GlassmorphicButton onClick={() => { onGetAccess(); setMenuOpen(false); }}>Get access</GlassmorphicButton>
+            <GlassmorphicButton onClick={() => { onSignIn(); setMenuOpen(false); }}>Start for free</GlassmorphicButton>
           </div>
         </div>
       )}
 
       <main className="relative z-10 flex-grow flex flex-col items-center justify-center text-center px-4 mt-32 mb-32">
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">AI-Powered Student Planner</h1>
-        <p className="text-lg sm:text-xl md:text-2xl mb-8 max-w-2xl">
+        <p style={{
+          backgroundColor: "rgb(19 42 67 / 50%)",
+          borderRadius: "10px",
+          padding: "15px 0",
+        }} className="text-lg sm:text-xl md:text-2xl mb-8 max-w-2xl">
           Sync your studies with Google Calendar and Tasks for effortless planning
         </p>
         <div className="flex space-x-4">
-          <GlassmorphicButton className="text-base sm:text-lg" onClick={onGetAccess}>Get access</GlassmorphicButton>
+          <GlassmorphicButton className="text-base sm:text-lg" onClick={onGetAccess}>Get started</GlassmorphicButton>
           <a className="text-base sm:text-lg" href="#features">
             <GlassmorphicButton>Learn more</GlassmorphicButton>
           </a>
