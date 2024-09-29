@@ -2,7 +2,7 @@ import axios from 'axios';
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const handleGoogleSignup = async () => {
   try {
-    const response = await axios.get('https://scio-planning.vercel.app/login');
+    const response = await axios.get('https://scio-plan-backend.onrender.com/login');
     if (response.data && response.data.url) {
       window.location.href = response.data.url;
     } else {
