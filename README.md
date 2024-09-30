@@ -15,6 +15,8 @@
 
 Scio AI Planner is an advanced, AI-powered study and schedule management tool designed to revolutionize the way students organize their academic lives. Named after the Latin word "to know," Scio embodies our commitment to knowledge and learning. Our application combines cutting-edge AI technology with intuitive user interfaces to provide a comprehensive, personalized learning management experience.
 
+### P.S the backend API might shutdown due to inactivity and might take a minute or more so when signing up just be patient 
+
 ## Features
 
 1. **Intelligent Schedule Management**
