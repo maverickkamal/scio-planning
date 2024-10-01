@@ -6,7 +6,10 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata = {
   title: 'Scio AI Planner',
   description: 'A modern AI planner application',
-}
+  icons: [
+    { rel: 'icon', url: '/favicon.png' }
+    ],
+};
 
 export default function RootLayout({
   children,
