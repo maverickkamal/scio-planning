@@ -115,7 +115,8 @@ Scio AI Planner stands out from other study planning tools in several key ways:
 
 ## Usage
 
-
+Try having a chat with it 
+You can upload any document and also video of study environ to allow the AI to give more personalize recommendations
 
 
 ---
