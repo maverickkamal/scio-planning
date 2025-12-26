@@ -168,7 +168,7 @@ export default function Homepage({ onGetAccess, onSignIn }: HomepageProps) {
         <p className="mb-2 sm:mb-0">Copyright © 2024 Scio. All rights reserved.</p>
         <div className="flex space-x-4">
           <Link href="https://github.com/maverickkamal" aria-label="GitHub"><Github className="w-6 h-6 hover:text-gray-300 transition-colors duration-200" /></Link>
-          <Link href="https://x.com/maverickkama" aria-label="Twitter"><Twitter className="w-6 h-6 hover:text-gray-300 transition-colors duration-200" /></Link>
+          <Link href="https://x.com/mav3rickism" aria-label="Twitter"><Twitter className="w-6 h-6 hover:text-gray-300 transition-colors duration-200" /></Link>
           <Link href="https://www.linkedin.com/in/musa-kamaludeen/" aria-label="LinkedIn"><Linkedin className="w-6 h-6 hover:text-gray-300 transition-colors duration-200" /></Link>
         </div>
       </footer>
